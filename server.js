@@ -3,6 +3,8 @@ const cors = require('koa-cors');
 const koaBody = require('koa-body');
 const bodyParser = require('koa-bodyparser');
 const router = require('./router');
+const Faker = require('@faker-js/faker');
+const Database = require('./database/db');
 
 const app = new Koa();
 const port = '7070';

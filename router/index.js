@@ -1,5 +1,4 @@
 const messages = require('../api/messages');
-
 const Router = require('koa-router');
 
 const router = new Router();
