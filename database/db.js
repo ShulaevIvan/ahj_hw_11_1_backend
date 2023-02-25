@@ -5,7 +5,7 @@ class Database {
         this.messages = [];
         this.generateNumber = this.generateNumber.bind(this);
         this.messagesInterval = () => {
-            this.count = Number(this.generateNumber());
+            this.count = Number(this.generateNumber(5));
             this.generateMessages(this.count);
         }
     }
@@ -28,8 +28,9 @@ class Database {
         }
     }
 
+
     generateNumber(n = 1) {
-        return Number(Math.floor(Math.random() * n +1));
+        return Number(Math.floor(Math.random() * n + 1));
     }
 
     init() {
