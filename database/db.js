@@ -22,13 +22,13 @@ class Database {
                 from: userEmail,
                 subject: `hello from ${userEmail.replace(/@\w+\.\w+$/, '')}`,
                 body: Faker.faker.lorem.paragraphs(number = this.generateNumber(Math.random() * 3 | 1), string = '\n'),
-                received: +Faker.faker.date.recent(),
+                received: +Faker.faker.date.recent(20, '2023-02-22T00:00:00.000Z'),
             }
             this.messages.push(userMessage);
         }
     }
 
-    generateNumber(n = 5) {
+    generateNumber(n = 1) {
         return Number(Math.floor(Math.random() * n +1));
     }
 
